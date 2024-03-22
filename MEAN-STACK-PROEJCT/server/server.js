@@ -71,8 +71,7 @@ app.post("/clothes", (req, res) => {
     const jsonData = JSON.parse(data);
 
     const maxId = jsonData.items.reduce(
-      (max, item) => Math.max(max, item.id),
-      0
+      (max, item) => Math.max(max, item.id), 0
     );
 
     const newItem = {

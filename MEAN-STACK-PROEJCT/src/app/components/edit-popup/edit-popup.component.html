@@ -1,0 +1,30 @@
+<p-dialog header="Add Product" [(visible)]="display" [modal]="true" [closable]="false">
+
+    <div class="column gap-1">
+
+        <div class="row gap-05">
+            <span class="price-label">Name:</span>
+            <input type="text" [(ngModel)]="product.name">
+        </div>
+
+        <div class="row gap-05">
+            <span class="price-label">Price:</span>
+            <input type="text" [(ngModel)]="product.price">
+        </div>
+
+        
+        <div class="row gap-05">
+            <span class="price-label">Image:</span>
+            <input type="text" [(ngModel)]="product.image">
+        </div>
+
+        
+        <p-rating [(ngModel)]="product.rating" iconCancelClass="hidden">
+        </p-rating>
+    </div>
+
+    <p-footer>
+        <p-button type="button" icon="pi pi-check" (click)="onConfirm()" label="Add"></p-button>
+        <p-button type="button" icon="pi pi-times" (click)="onCancel()" label="Cancel"></p-button>
+    </p-footer>
+</p-dialog>
